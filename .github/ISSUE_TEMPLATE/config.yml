@@ -1,0 +1,2 @@
+# Purpose: disable unstructured issues so every actionable item starts with consistent context.
+blank_issues_enabled: false

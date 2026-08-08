@@ -1,0 +1,59 @@
+name: Feature
+description: Propor ou planejar um comportamento ou capacidade nova.
+title: "[Feature]: "
+labels: ["type:feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Este formulário registra uma unidade de trabalho; ele não a aprova para implementação. Preencha somente fatos e decisões confirmadas e marque hipóteses explicitamente.
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto
+      description: Por que este trabalho existe? Inclua links para fontes oficiais.
+    validations: {required: true}
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objetivo observável
+      description: Que resultado deverá ser observado sem antecipar detalhes desnecessários da solução?
+    validations: {required: true}
+  - type: textarea
+    id: scope
+    attributes:
+      label: Escopo
+      description: Liste o que está incluído.
+      placeholder: "- Incluído"
+    validations: {required: true}
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Fora de escopo
+      description: Liste explicitamente o que não será tratado.
+      placeholder: "- Não incluído"
+    validations: {required: true}
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critérios de aceite
+      description: Use resultados observáveis e verificáveis.
+      placeholder: "- [ ] Critério verificável"
+    validations: {required: true}
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependências e decisões
+      description: Registre bloqueios, documentos e ADRs; use “Nenhuma conhecida” quando aplicável.
+    validations: {required: true}
+  - type: textarea
+    id: risks
+    attributes:
+      label: Riscos e observações
+      description: Registre somente riscos relevantes e hipóteses ainda abertas.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidência esperada
+      description: Que testes, demonstração ou verificação provarão o resultado?
+    validations: {required: true}

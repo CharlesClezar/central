@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "managed": [
+    ".blueprint/CHANGELOG.md",
+    ".blueprint/manifest.json",
+    ".blueprint/source",
+    ".ai/engineering.md",
+    ".ai/templates/",
+    ".github/ISSUE_TEMPLATE/",
+    ".github/rulesets/",
+    "CLAUDE.md",
+    "scripts/bootstrap-local.sh",
+    "scripts/check-blueprint-update.sh",
+    "scripts/configure-github.sh",
+    "scripts/doctor.sh",
+    "scripts/project-item.sh",
+    "scripts/start-project.sh",
+    "scripts/validate-docs.py",
+    "scripts/validate-pr.sh",
+    "scripts/validate-repository.sh"
+  ],
+  "assisted": [
+    ".ai/README.md",
+    ".ai/backlog.md",
+    ".ai/blueprint-updates.md",
+    ".ai/github-setup.md",
+    ".ai/interaction-guide.md",
+    ".ai/project-init.md",
+    ".ai/security.md",
+    ".ai/template-audit.md",
+    ".ai/workflow.md",
+    ".github/README.md",
+    ".github/pull_request_template.md",
+    ".github/workflows/",
+    ".gitignore",
+    "AGENTS.md",
+    "README.md"
+  ],
+  "local": [
+    ".blueprint/version",
+    ".ai/decisions/",
+    ".ai/engineering-context.md",
+    ".ai/vision.md",
+    "CHANGELOG.md",
+    "application-source-and-stack-specific-files"
+  ]
+}

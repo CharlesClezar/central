@@ -1,0 +1,43 @@
+name: Documentation
+description: Planejar uma mudança cujo principal resultado é documentação.
+title: "[Documentation]: "
+labels: ["type:documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Documentação é parte do produto e segue a mesma rastreabilidade de qualquer alteração versionada.
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto e público
+      description: Quem precisa desta informação e para agir em qual situação?
+    validations: {required: true}
+  - type: textarea
+    id: objective
+    attributes:
+      label: Resultado esperado
+    validations: {required: true}
+  - type: textarea
+    id: scope
+    attributes:
+      label: Escopo e fora de escopo
+      placeholder: |
+        Incluído:
+        -
+
+        Fora de escopo:
+        -
+    validations: {required: true}
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critérios de aceite
+      placeholder: "- [ ] Critério verificável"
+    validations: {required: true}
+  - type: textarea
+    id: sources
+    attributes:
+      label: Fontes e evidência esperada
+      description: Indique fontes oficiais, revisão necessária e como validar links ou exemplos.
+    validations: {required: true}

@@ -1,0 +1,11 @@
+# Purpose: keep local credentials, tool state, and personal agent instructions out of version control.
+
+.DS_Store
+.env
+.env.*
+!.env.example
+CLAUDE.local.md
+.claude/settings.local.json
+*.log
+__pycache__/
+*.py[cod]

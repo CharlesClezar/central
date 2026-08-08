@@ -1,0 +1,39 @@
+# Purpose: verify a version tag belongs to main and create its GitHub Release.
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: release
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out complete history
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          fetch-depth: 0
+
+      - name: Verify tag belongs to main
+        run: |
+          git fetch origin main
+          tagged_commit=$(git rev-list -n 1 "$GITHUB_REF_NAME")
+          if ! git merge-base --is-ancestor "$tagged_commit" origin/main; then
+            echo "Release tag must point to a commit contained in main." >&2
+            exit 1
+          fi
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" --verify-tag --generate-notes --title "$GITHUB_REF_NAME"

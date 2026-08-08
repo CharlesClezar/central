@@ -1,0 +1,46 @@
+name: Research
+description: Investigar uma pergunta limitada para apoiar uma decisão.
+title: "[Research]: "
+labels: ["type:research"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Pesquisa termina em evidência e recomendação; não autoriza automaticamente a solução recomendada.
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto
+      description: Por que a resposta é necessária agora?
+    validations: {required: true}
+  - type: textarea
+    id: question
+    attributes:
+      label: Pergunta decisória
+      description: Formule uma pergunta objetiva.
+    validations: {required: true}
+  - type: textarea
+    id: options
+    attributes:
+      label: Opções ou hipóteses
+      placeholder: "- Opção ou hipótese"
+    validations: {required: true}
+  - type: textarea
+    id: limits
+    attributes:
+      label: Limites
+      description: Declare profundidade, prazo quando houver e itens fora de escopo.
+    validations: {required: true}
+  - type: checkboxes
+    id: completion
+    attributes:
+      label: Critérios de conclusão
+      options:
+        - label: Evidências registradas
+          required: true
+        - label: Trade-offs comparados
+          required: true
+        - label: Recomendação apresentada
+          required: true
+        - label: Decisão ou próximo passo definido
+          required: true

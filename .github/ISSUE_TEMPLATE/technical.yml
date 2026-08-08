@@ -1,0 +1,48 @@
+name: Technical
+description: Planejar manutenção, infraestrutura ou melhoria interna verificável.
+title: "[Technical]: "
+labels: ["type:technical"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Trabalho técnico também precisa de resultado verificável, limite e evidência; “melhorar o código” não é objetivo suficiente.
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto
+      description: Que necessidade, risco ou restrição justifica o trabalho?
+    validations: {required: true}
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objetivo verificável
+    validations: {required: true}
+  - type: textarea
+    id: scope
+    attributes:
+      label: Escopo e fora de escopo
+      placeholder: |
+        Incluído:
+        -
+
+        Fora de escopo:
+        -
+    validations: {required: true}
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critérios de aceite
+      placeholder: "- [ ] Critério verificável"
+    validations: {required: true}
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependências e decisões
+      description: Inclua ADRs ou necessidade de nova dependência; use “Nenhuma” quando aplicável.
+    validations: {required: true}
+  - type: textarea
+    id: risks
+    attributes:
+      label: Riscos, reversibilidade e evidência esperada
+    validations: {required: true}

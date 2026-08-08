@@ -1,0 +1,56 @@
+name: Bug
+description: Registrar a correção de um comportamento existente e incorreto.
+title: "[Bug]: "
+labels: ["type:bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Descreva evidência observada. Não confunda hipótese de causa com diagnóstico confirmado.
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto e impacto
+      description: Onde o problema ocorre, quem é afetado e por que importa?
+    validations: {required: true}
+  - type: textarea
+    id: observed
+    attributes:
+      label: Comportamento observado
+      description: Inclua passos mínimos, mensagens e evidências não sensíveis.
+    validations: {required: true}
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamento esperado
+      description: Vincule a fonte do comportamento esperado quando existir.
+    validations: {required: true}
+  - type: textarea
+    id: scope
+    attributes:
+      label: Escopo e fora de escopo
+      placeholder: |
+        Incluído:
+        -
+
+        Fora de escopo:
+        -
+    validations: {required: true}
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critérios de aceite
+      placeholder: "- [ ] Critério verificável"
+    validations: {required: true}
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependências, riscos e decisões
+      description: Use “Nenhuma conhecida” quando aplicável.
+    validations: {required: true}
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidência esperada
+      description: Inclua teste de regressão ou outra verificação apropriada.
+    validations: {required: true}
